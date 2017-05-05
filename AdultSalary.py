@@ -6,10 +6,9 @@ import matplotlib.pyplot as plt
 
 # Loading the Data Set
 data = pd.read_csv("train.csv")
-test = pd.read_csv('test.csv')
 null = data.isnull().sum() #To determine the the no. of NaN
 
-# Imputing the Nan Values , other methods such as kNN, sklearn Imputer can also be used
+# Imputing the NaN Values , other methods such as kNN, sklearn Imputer can also be used
 #Education
 data.workclass.value_counts(sort=True)
 data.workclass.fillna('Private',inplace=True)
